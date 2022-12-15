@@ -9,7 +9,7 @@ const Input = (props) => {
 
 	return (
         <input 
-					className="col-12 border-0"
+					className="col-12 border-0 cream-background"
 					type="text" 
 					placeholder="What needs to be done?" 
 					onChange={(e) => setInputValue(e.target.value)}

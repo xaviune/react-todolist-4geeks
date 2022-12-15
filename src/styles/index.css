@@ -10,6 +10,18 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&display=swap');
 .final{
     float: right;
+}
+.mainTitle{
+    color:#EBD8D9;
+    font-size: 64px;
+}
+body{
+    font-family: 'Josefin Slab', serif;
+    background: #F9F9F9;
+}
+.cream-background{
+    background: #F9F9F9;
 }
