@@ -8,7 +8,7 @@ const Home = () => {
 
 	return (
 		<div className="container">
-			<h1 className="text-center mainTitle">todos</h1>
+			<h1 className="text-center mainTitle mt-5">todos</h1>
 			<div className="row">
 				<div className="border border-secondary p-2"> 
 					<Input inputValue= {inputValue} setInputValue={setInputValue} todos={todos} setTodos={setTodos}/>
