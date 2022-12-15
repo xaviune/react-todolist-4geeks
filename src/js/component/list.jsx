@@ -1,8 +1,24 @@
 import React from "react";
+import { XIcon } from "@primer/octicons-react";
 
-const List = () => {
+const List = (props) => {
+	const todos=props.todos;
+	const setTodos=props.setTodos;
 	return (
-				<div className="border border-secondary p-2"> Wash the dishes <div className="final"><XIcon size={24} /></div></div>
+		<>
+		{todos.map ((item, index) => (
+			<div className="border border-secondary p-2"> {item}<div className="final"
+			onClick={
+				() => 
+			setTodos(
+				todos.filter(
+					(t, currentIndex) =>
+						index != currentIndex
+			))}>
+				<XIcon size={24}/></div></div>
+			))}
+		
+		</>
 	);
 };
 

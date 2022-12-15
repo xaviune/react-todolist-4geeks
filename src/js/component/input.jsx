@@ -1,9 +1,26 @@
 import React from "react";
 
 
-const Input = () => {
+const Input = (props) => {
+	const todos=props.todos;
+	const setTodos=props.setTodos;
+	const inputValue=props.inputValue;
+	const setInputValue=props.setInputValue;
+
 	return (
-        <div className="border border-secondary p-2"> <input className="col-12 border-0" type="text" placeholder="What needs to be done?"></input></div>
+        <input 
+					className="col-12 border-0"
+					type="text" 
+					placeholder="What needs to be done?" 
+					onChange={(e) => setInputValue(e.target.value)}
+					value={inputValue}
+					onKeyUp={
+						(e) => {
+						if	(e.key === "Enter") {setTodos(todos.concat(([inputValue])));
+							setInputValue("");
+						}
+					}}
+					></input>
 	);
 };
 
